@@ -18,7 +18,7 @@ There is also an onscreen [PREV] and [NEXT] button below the "modal" which can b
 • Employee name "search" functionality:- This display screen will only reveal "cards" of employee that matches the input in the "search" input on the top-left corner of the "Employee detail card" display. The "Employee detail modal" of only the matches can be accessed, and the [PREV] and [NEXT] button are not accessible while there is an input in the "search" input.
 
 //-----------------------------------------------------------//
-//------- RANDOM USER GENERATOR API FETCH FUNCTIONS -------- //
+RANDOM USER GENERATOR API FETCH FUNCTIONS
 //-----------------------------------------------------------//
 
 • fetchData(url):- fetchData(url) takes a url as a parameter, and return the data received in json format using the browser native fetch API.
@@ -28,7 +28,7 @@ There is also an onscreen [PREV] and [NEXT] button below the "modal" which can b
 • Promise.all([fetchData(url)]):- The fetchData function is passed a url to 'https://randomuser.me/api/'. The request is modified to ensure the data received is for 12 employees only, and only from English speaking countries. A single promise object is created using the Promise.all object, then all the helper functions user interaction function, and event listeners functions are applied on the data received.
 
 //-----------------------------------------------------------//
-// ------------------- HELPER FUNCTIONS -------------------- //
+HELPER FUNCTIONS
 //-----------------------------------------------------------//
 
 • insertAfter(newElement, referenceElement):- insertAfter(newElement, referenceElement inserts newElement after the referenceElement.
@@ -40,25 +40,25 @@ There is also an onscreen [PREV] and [NEXT] button below the "modal" which can b
 • generateSearchContainer():- generateSearchContainer() renders the search input bar and the submit button dynamically.
 
 //-----------------------------------------------------------//
-// --------------- EVENT LISTENERS FUNCTIONS --------------- //
+EVENT LISTENERS FUNCTIONS
 //-----------------------------------------------------------//
 
 • showModal():- showModal() displays the employee modals for the employee card which is clicked. A click event listener is applied to all the employee cards inside the function. Functions used inside this function are:-
 
-    ––– * changeVisibility(click):- changeVisibility(click) changes the 'visibility' of the modal from hidden to visible.
+- changeVisibility(click):- changeVisibility(click) changes the 'visibility' of the modal from hidden to visible.
 
 • closeModal():- closeModal() hides the employee modals when the [X] button on the top right corner of the modal is clicked. A click event listener is applied to all the employee modals inside the function.
 
 • modalToggle():- modalToggle() moves to the next modal when the [NEXT] button is clicked, and to the previous modal when the [PREV] button is clicked. A click event listener is applied to all the employee modals inside the function. Functions used inside this function are:-
 
-    ––– * prevElementToggler(node, index, decrement):- prevElementToggler(node, index, decrement) hides the current employee modal, and show a previous employee modal 'decrement' index away from the current modal.
+- prevElementToggler(node, index, decrement):- prevElementToggler(node, index, decrement) hides the current employee modal, and show a previous employee modal 'decrement' index away from the current modal.
 
 • searchFunctionality():- searchFunctionality() hides the employee cards for "unmatched" search query from the search input bar. A click, and keyup event listener are applied to the search input, and the submit button located on the top-right corner of the page inside the function. Functions used inside this function are:-
 
-    ––– * performSearch(input, names):- performSearch searches for matching employee Card names and displays corresponding names i.e employeeCard.
+- performSearch(input, names):- performSearch searches for matching employee Card names and displays corresponding names i.e employeeCard.
 
 //-----------------------------------------------------------//
-// --------- STRUCTURE, STYLE, AND STYLING CHANGES --------- //
+STRUCTURE, STYLE, AND STYLING CHANGES
 //-----------------------------------------------------------//
 
 • Font-family:- Font family has been changed to 'Titillium Web', sans-serif, imported from https://fonts.googleapis.com.
@@ -85,45 +85,57 @@ There is also an onscreen [PREV] and [NEXT] button below the "modal" which can b
 
 • .card:- .card's background has been changed to rgba(224, 221, 207, 0.98).
 
-• .card:hover {
+• .
+card:hover {
 background-color: #F8F4E3;
 box-shadow: 0 20px 50px rgba(243, 244, 227, 0.7);
 transform: scale(1.1);
 transition: all 0.3s ease-in-out 0s;
-} has been applied.
+}
+has been applied.
 
-• .card-img:hover {
+•
+.card-img:hover {
 border-radius: 10%;
 transform: scale(1.2);
 transition: all 0.3s ease-in-out 0s;
-} has been applied.
+}
+has been applied.
 
 • .modal:- .modal's background has been changed to rgba(224, 221, 207, 1).
 
-• .modal-close-btn:hover {
+•
+.modal-close-btn:hover {
 transform: scale(1.5);
 transition: all 0.3s ease-in-out 0s;
-} has been applied.
+}
+has been applied.
 
-• .modal-img:hover {
+•
+.modal-img:hover {
 border-radius: 10%;
 transform: scale(1.2);
 transition: all 0.3s ease-in-out 0s;
-} has been applied.
+}
+has been applied.
 
 • .modal-btn-container:- .modal-btn-container's background has been changed to rgba(248, 244, 227, 1).
 
-• .modal-btn-container:hover {
+•
+.modal-btn-container:hover {
 transform: scale(1.1);
 transition: all 0.3s ease-in-out 0s;
-} has been applied.
+}
+has been applied.
 
 • .modal-btn-container .btn:- .modal-btn-container .btn's background has been changed to rgba(255, 255, 255, 0.9).
 
+•
 .modal-btn-container .btn:hover {
 transform: scale(1.1);
 transition: all 0.3s ease-in-out 0s;
-} has been applied.
+}
+has been applied.
 
 @media (min-width: 1024px) {
 
